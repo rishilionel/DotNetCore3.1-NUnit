@@ -18,3 +18,4 @@ namespace Temperatura.Testes
     }
 }
 // testsssssssssssssssssssssss
+

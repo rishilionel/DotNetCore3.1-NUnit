@@ -14,6 +14,7 @@ jobs:
     environment: master
     steps:
     - uses: actions/checkout@v2
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -58,12 +59,14 @@ jobs:
         }
         ENDOFFILE
         pwsh ./testcase.ps1
+
     - name: Deploy
       uses: exuanbo/actions-deploy-gist@v1
       with:
         token: ${{ secrets.GIST_AUTH_TOKEN }}
         gist_id: ${{ secrets.GIST_ID }}
         file_path: dotnet2/Temperatura.Testes/Application2_test_case.json
+
 
 
   development:
@@ -73,6 +76,7 @@ jobs:
     environment: development
     steps:
     - uses: actions/checkout@v2
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -116,12 +120,14 @@ jobs:
         }
         ENDOFFILE
         pwsh ./testcase.ps1
+
     - name: Deploy
       uses: exuanbo/actions-deploy-gist@v1
       with:
         token: ${{ secrets.GIST_AUTH_TOKEN }}
         gist_id: ${{ secrets.GIST_ID }}
         file_path: dotnet2/Temperatura.Testes/Application2_test_case.json
+
 
 
 
